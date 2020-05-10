@@ -1,8 +1,6 @@
 import os
-from pprint import pprint
 
 from sklearn.model_selection import train_test_split
-from sklearn.datasets import load_breast_cancer, load_boston, load_iris
 
 from auto_ml.exceptions import UnknownMLTaskException
 from auto_ml.models import ClassificationModel, RegressionModel
