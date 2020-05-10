@@ -20,7 +20,8 @@ if __name__ == '__main__':
     ml_runner.run(
         data, target, use_bootstrap=False, metric='f1', metric_params=None,
         models=['LogisticRegression', 'RandomForestClassifier', 'RandomForestClassifier'],
-        model_params=[{'C': 0.1, 'solver': 'liblinear'}, {'n_estimators': 50, 'max_depth': 5}, {}]
+        model_params=[{'C': 0.1, 'solver': 'liblinear'}, {'n_estimators': 50, 'max_depth': 5}, {}],
+        result_file='results.csv', use_threads=False,
     )
 ```
 
@@ -34,9 +35,10 @@ if __name__ == '__main__':
     data, target = load_iris(return_X_y=True)
     ml_runner = MLRunner(task='classification')
     ml_runner.run(
-        data, target, use_bootstrap=False, metric='f1', metric_params={'average': 'macro'}, n_samples=300,
+        data, target, use_bootstrap=True, metric='f1', metric_params={'average': 'macro'}, n_samples=100,
         models=['LogisticRegression', 'RandomForestClassifier', 'RandomForestClassifier'],
-        model_params=[{'C': 0.1, 'solver': 'liblinear'}, {'n_estimators': 50, 'max_depth': 5}, {}]
+        model_params=[{'C': 0.1, 'solver': 'liblinear'}, {'n_estimators': 50, 'max_depth': 5}, {}],
+        result_file='results.csv', use_threads=False,
     )
 ```
 
@@ -50,9 +52,10 @@ if __name__ == '__main__':
     data, target = load_boston(return_X_y=True)
     ml_runner = MLRunner(task='regression')
     ml_runner.run(
-        data, target, use_bootstrap=False, metric='mse', n_samples=1000,
+        data, target, use_bootstrap=False, metric='mse',
         models=['LinearRegression', 'RandomForestRegressor', 'RandomForestRegressor'],
-        model_params=[{}, {'n_estimators': 50, 'max_depth': 5}, {}]
+        model_params=[{}, {'n_estimators': 50, 'max_depth': 5}, {}],
+        result_file='results.csv', use_threads=False,
     )
 ```
 
