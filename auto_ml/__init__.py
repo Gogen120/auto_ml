@@ -38,4 +38,5 @@ class MLRunner:
             ml_model.run_models_threads()
         else:
             ml_model.run_models()
+
         return ml_model.results
