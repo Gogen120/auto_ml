@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 
 install_requires = [
-    'numpy==1.18.4',
+    'numpy==1.22.0',
     'pandas==1.0.3',
     'scikit-learn==0.22.2.post1',
     'pytest==5.4.1',
