@@ -7,7 +7,7 @@ install_requires = [
     'scikit-learn==0.22.2.post1',
     'pytest==5.4.1',
     'pytest-cov==2.8.1',
-    'joblib==0.14.1',
+    'joblib==1.2.0',
 ]
 
 
